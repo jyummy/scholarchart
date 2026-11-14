@@ -2,7 +2,7 @@
 
 > 学术规范的矢量图表工具 —— 严谨如期刊，干净如现代设计。
 
-**[🌐 在线使用（无需安装）：https://jummy.github.io/scholarchart/](https://jummy.github.io/scholarchart/)**
+**[🌐 在线使用（无需安装）：https://jyummy.github.io/scholarchart/](https://jyummy.github.io/scholarchart/)**
 
 为论文与科研场景设计的纯前端图表引擎：**原生 SVG 渲染、矢量 PDF 导出、期刊幅面预设、色盲安全淡雅配色**，零运行时依赖，双击 `index.html` 即用。
 
@@ -102,7 +102,7 @@ cd scholarchart
 python3 -m http.server 8000
 ```
 
-或直接用在线版：<https://jummy.github.io/scholarchart/>（功能与本地版完全一致）。
+或直接用在线版：<https://jyummy.github.io/scholarchart/>（功能与本地版完全一致）。
 
 右侧面板：选样例 → 改幅面/配色 → 编辑 JSON 数据 → 导出。
 
