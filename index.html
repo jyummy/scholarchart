@@ -17,12 +17,12 @@
   header h1 em { font-style:normal; color:var(--sub); font-weight:400; margin-left:8px; font-size:12.5px }
   header a { margin-left:auto; color:var(--sub); text-decoration:none; font-size:12px }
   header a:hover { color:var(--ink) }
-  main { display:grid; grid-template-columns:56px 1fr 300px; min-height:calc(100vh - 54px) }
-  /* 左侧图表导航 */
-  nav { border-right:1px solid var(--line); padding:14px 0 }
-  .nav-btn { display:block; width:100%; padding:11px 0 10px; background:none; border:none; border-left:2px solid transparent; color:var(--sub); font:12.5px inherit; cursor:pointer; writing-mode:vertical-lr; letter-spacing:3px; margin:6px 0 }
-  .nav-btn:hover { color:var(--ink) }
-  .nav-btn.on { color:var(--ink); border-left-color:var(--ink); font-weight:600 }
+  main { display:grid; grid-template-columns:1fr 300px; min-height:calc(100vh - 54px) }
+  /* 图表导航：画布下方横排 */
+  nav { display:flex; flex-wrap:wrap; justify-content:center; gap:6px; max-width:720px; padding:0 }
+  .nav-btn { padding:6px 13px; background:none; border:1px solid var(--line); color:var(--sub); font:12.5px inherit; cursor:pointer; letter-spacing:.5px; border-radius:2px }
+  .nav-btn:hover { color:var(--ink); border-color:#b9b9b2 }
+  .nav-btn.on { color:var(--ink); border-color:var(--ink); font-weight:600 }
   /* 画布区 */
   .stage { padding:34px 40px; display:flex; flex-direction:column; align-items:center; gap:18px; background:#fcfcfb }
   .stage svg { display:block; width:min(100%, 720px); height:auto; background:#fff; box-shadow:0 0 0 1px var(--hair) }
@@ -42,7 +42,7 @@
   button.act.ghost:hover { background:#f6f6f4 }
   #dataMsg { font-size:11px; margin-top:5px; min-height:16px }
   footer { grid-column:1 / -1; border-top:1px solid var(--line); padding:12px 26px; color:var(--sub); font-size:11.5px; display:flex; gap:18px }
-  @media (max-width:900px){ main { grid-template-columns:1fr } nav { display:flex; overflow-x:auto } .nav-btn { writing-mode:horizontal-tb; letter-spacing:0; border-left:none; border-bottom:2px solid transparent; padding:9px 12px } .nav-btn.on { border-bottom-color:var(--ink) } aside { border-left:none; border-top:1px solid var(--line) } }
+  @media (max-width:900px){ main { grid-template-columns:1fr } nav { flex-wrap:nowrap; overflow-x:auto; max-width:none; justify-content:flex-start } .nav-btn { white-space:nowrap; flex:none } aside { border-left:none; border-top:1px solid var(--line) } }
 </style>
 </head>
 <body>
@@ -51,10 +51,10 @@
   <a href="https://github.com/" target="_blank">GitHub ↗</a>
 </header>
 <main>
-  <nav id="chartNav"></nav>
   <section class="stage">
     <svg id="canvas" width="170" height="110" viewBox="0 0 170 110" xmlns="http://www.w3.org/2000/svg"></svg>
     <div class="hint">SVG 原生渲染 · 悬浮查看数值</div>
+    <nav id="chartNav"></nav>
   </section>
   <aside>
     <h3>样例数据</h3>
@@ -93,7 +93,7 @@
   </aside>
 </main>
 <footer><span>零运行时依赖 · 纯 SVG · MIT</span><span>PDF 导出走浏览器打印管线（Chrome/Edge 另存为 PDF 即矢量，可直接投稿）</span></footer>
-<script type="module" src="./src/app.js?v=20261114h"></script>
-  <div id="ver" style="position:fixed;right:8px;bottom:4px;font:400 10px ui-monospace,monospace;color:#9a9a9a;user-select:none;z-index:99">v20261114h</div>
+<script type="module" src="./src/app.js?v=20261114i"></script>
+  <div id="ver" style="position:fixed;right:8px;bottom:4px;font:400 10px ui-monospace,monospace;color:#9a9a9a;user-select:none;z-index:99">v20261114i</div>
 </body>
 </html>
